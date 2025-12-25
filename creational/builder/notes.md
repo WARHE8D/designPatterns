@@ -23,3 +23,13 @@ PCBuilder pcComponents = new PCBuilder("Ryzen 5 5500","32 GB DDR4", "1 TB",
 
 As a result, incorrect assignments can easily occur (for example, passing a motherboard value where a GPU is expected),
 leading to bugs that are hard to detect and maintain.
+
+Solution: Builder Pattern makes it much easier to add arguments for the Object
+
+        PCComponentsBuilder pcComponentsBuilder = new PCComponentsBuilder("Ryzen 5 5500", "32 GB DDR4",
+        "2TB SSD", "ASUS B550", "MSI MAG A850")
+        .gpu("Sapphire 7600 XT")
+        .pwmFans("CORSAIR RS120")
+        .minBudget(800)
+        .maxBudget(1200)
+        .build();

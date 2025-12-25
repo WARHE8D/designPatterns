@@ -44,4 +44,19 @@ public class PCComponentsBuilder {
     public PCComponentsBuilder build() {
         return new PCComponentsBuilder(cpu, ram, storage, mobo, psu);
     }
+
+    @Override
+    public String toString() {
+        return "PCComponentsBuilder{" +
+                "cpu='" + cpu + '\'' +
+                ", ram='" + ram + '\'' +
+                ", storage='" + storage + '\'' +
+                ", gpu='" + gpu + '\'' +
+                ", mobo='" + mobo + '\'' +
+                ", psu='" + psu + '\'' +
+                ", pwmFans='" + pwmFans + '\'' +
+                ", minBudget=" + minBudget +
+                ", maxBudget=" + maxBudget +
+                '}';
+    }
 }

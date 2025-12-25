@@ -21,9 +21,14 @@ public class Main {
                 .minBudget(800)
                 .maxBudget(1200)
                 .build();
+        addPCComponents(pcComponentsBuilder);
     }
 
     private static void addPCComponents(PCComponents pcComponents) {
         System.out.println("Adding PC components: " + pcComponents.toString());
+    }
+
+    private static void addPCComponents(PCComponentsBuilder pcComponentsBuilder) {
+        System.out.println("Adding PC components: " + pcComponentsBuilder.toString());
     }
 }

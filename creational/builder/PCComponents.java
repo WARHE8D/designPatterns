@@ -7,18 +7,18 @@ public class PCComponents {
     private final String gpu;
     private final String mobo;
     private final String psu;
-    private final String heatSink;
+    private final String pwmFans;
     private final long minBudget;
     private final long maxBudget;
 
-    public PCComponents(String cpu, String ram, String storage, String gpu, String mobo, String psu, String heatSink, long minBudget, long maxBudget) {
+    public PCComponents(String cpu, String ram, String storage, String gpu, String mobo, String psu, String pwmFans, long minBudget, long maxBudget) {
         this.cpu = cpu;
         this.ram = ram;
         this.storage = storage;
         this.gpu = gpu;
         this.mobo = mobo;
         this.psu = psu;
-        this.heatSink = heatSink;
+        this.pwmFans = pwmFans;
         this.minBudget = minBudget;
         this.maxBudget = maxBudget;
     }
@@ -32,7 +32,7 @@ public class PCComponents {
                 ", gpu='" + gpu + '\'' +
                 ", mobo='" + mobo + '\'' +
                 ", psu='" + psu + '\'' +
-                ", heatSink='" + heatSink + '\'' +
+                ", pwmFans='" + pwmFans + '\'' +
                 ", minBudget=" + minBudget +
                 ", maxBudget=" + maxBudget +
                 '}';

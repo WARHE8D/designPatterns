@@ -33,3 +33,9 @@ Solution: Builder Pattern makes it much easier to add arguments for the Object
         .minBudget(800)
         .maxBudget(1200)
         .build();
+
+primary reason for using the builder pattern in object construction is to manage the complexity of creating objects with
+many optional and required parameters
+
+the PersonBuilder class described as a static nested class inside the Person class is to ensure that the PersonBuilder
+can only be used when Person objects are created

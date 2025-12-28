@@ -1,4 +1,4 @@
-import creational.asbtract.*;
+package creational.asbtract;
 
 public class AbstractMain {
     public static void main(String[] args) {

@@ -1,5 +1,4 @@
-import creational.factory.AssignLanesFactory;
-import creational.factory.CharacterLanes;
+package creational.factory;
 
 public class FactoryMain {
     public static void main(String[] args) {

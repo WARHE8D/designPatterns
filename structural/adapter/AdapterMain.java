@@ -16,5 +16,14 @@ public class AdapterMain {
         var mangaReviewAdapter = new MangaReviewAdapter();
         var portal1 = new MyAnimeListPortal(mangaReviewAdapter);
         portal1.uploadReview();//this is the overridden method from ReviewUploader interface
+        //now you see "I have successfully uploaded the Manga Review!" which is a print from the older version
+        //of manga upload but the object adapter pattern doesnt change the codebase so
+        // if you wanna change the uploadMangaReview method of manga review class you cant at least in that
+        // old MangaReviewUploader class.
+        //we overrite the uploadMangaReview method in our adapter class this way its not changing the original code and
+        //it stays unaffected
+        // this is the class adapter pattern
+
+
     }
 }

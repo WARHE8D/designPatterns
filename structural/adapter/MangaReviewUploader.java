@@ -11,6 +11,6 @@ public class MangaReviewUploader {
     //for manage reviews
     public void uploadMangaReview() {
         System.out.println("Manga Review Uploader started...");
-        System.out.println("Manga Review successfully uploaded!");
+        System.out.println("I have successfully uploaded the Manga Review!");
     }
 }

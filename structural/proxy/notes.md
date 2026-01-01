@@ -1,24 +1,35 @@
 # Proxy Pattern
 
-    Used to reduce method calls which are resource expensive
-    Can also provide access control for these methods
+A **structural design pattern** where a proxy object controls access to a real object.
+It helps **delay creation**, **reduce expensive calls**, and **add access control**
+without changing the real object.
 
-# Use Case:
+## Why use it?
 
-    When we open myanimelist we get to see:
-    top seasonal animes,
-    recomended animes for the user
+- Avoid repeated calls to resource-expensive methods
+- Create objects only when needed (lazy loading)
+- Control access based on conditions (e.g., login)
 
-    so when we open the homepage we get:
-    getTopSeasonalAnime(),
-    getRecomendedAnime(User user)
+## Use Case (MyAnimeList)
 
-    getTopSeasonalAnime() shows animes for everyone wihout login
-    and when user logs in he gets to see his personalized recomendation
-    but we also call the getTopSeasonalAnime again to load in the homepage
+When opening the homepage:
 
-# Solution:
+- `getTopSeasonalAnime()` → visible to everyone
+- `getRecommendedAnime(User user)` → visible only after login
 
-    proxy makes it so that getTopSeasonalAnime gets called only once before and after login. 
-    Coz getTopSeasonalAnime has to load anyway. 
-    And recomemnded animes only gets displayed only when the user logs in so this is one of the access control.
+Problem:
+
+- `getTopSeasonalAnime()` gets called again after login, causing duplicate work
+
+## Solution
+
+- A **proxy** wraps the real MyAnimeList object
+- The real object is created **only once**
+- `getTopSeasonalAnime()` is reused
+- `getRecommendedAnime()` is shown **only if the user is logged in**
+
+## Key Benefits
+
+- Reduces unnecessary method calls
+- Improves performance
+- Adds access control without modifying core logic

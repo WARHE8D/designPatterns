@@ -1,10 +1,18 @@
-# Iterator Pattern
+# Iterator Pattern in Java
 
-We have used Collections alot of times.
-Iterator is one of its methods
-and we also have Iterable:
-Implementing this interface allows an object to be the target of the enhanced for statement
-(sometimes called the "for-each loop" statement)
+The **Iterator Pattern** allows sequential access to elements of a collection without exposing its underlying
+representation.
+It is commonly used with **Collections** in Java.
 
-This pattern helps us loop over similar objects
-we can also create custom iterable operations too
+Implementing the `Iterable` interface allows an object to be used in a **for-each loop**, making iteration simple and
+consistent.
+You can also create **custom iteration logic** by implementing the `Iterator` interface.
+
+---
+
+### Key Points
+
+- Iterable allows an object to be iterated using a for-each loop.
+- Iterator defines how to traverse elements.
+- You can customize iteration logic (e.g., only return MARKSMAN or MAGE types in the example).
+- Helps encapsulate collection traversal, keeping your code clean and maintainable.

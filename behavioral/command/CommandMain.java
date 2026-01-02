@@ -1,5 +1,9 @@
 package behavioral.command;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+
 public class CommandMain {
     public static void main(String[] args) {
         var light = new Light();
@@ -20,5 +24,8 @@ public class CommandMain {
 
         lightOpExe.execute(new SwitchOffOperation(light1));
         light1.isOn();
+
+        Collection<String> c = new ArrayList<String>();
+        Iterator<String> it = c.iterator();
     }
 }
